@@ -11,8 +11,10 @@ $(document).ready(function(){
 	});
 
 	// vertical center the title
-	$(".project-img").load(function() {
-		centerTitle();
+	$(".project-img").one("load", function() {
+		centerTitle()
+	}).each(function() {
+		if(this.complete){ $(this).load(); }
 	});
 });
 
