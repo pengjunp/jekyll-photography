@@ -11,7 +11,7 @@ $(document).ready(function(){
 	});
 
 	// vertical center the title
-	$("img").load(function() {
+	$(".project-img").load(function() {
 		centerTitle();
 	});
 });
