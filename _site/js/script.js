@@ -12,21 +12,19 @@ $(document).ready(function(){
 
 	// vertical center the title
 	$("img").load(function() {
-		center_title();
+		centerTitle();
 	});
 });
 
 $( window ).resize(function() {
-	center_title();
+	centerTitle();
 });
 
-function center_title() {
+function centerTitle() {
 	var img_height = $(".project-img").height();
-	// var img_height = $(".project-img").clientHeight();
 	var line_height = parseInt($(".expand").css("line-height"), 10);
 	var offset = (img_height - line_height) / 2;
-	var padding = ""+offset+"px"+" 5px 0"
-	console.log(offset);
+	var padding = ""+offset+"px"+" 5px 0";
 	$(".expand").css("padding", padding);
 }
 /**
