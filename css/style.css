@@ -34,6 +34,8 @@
 
 	#nav-menu{
 		width: 100%;
+		margin: 0;
+		margin-top: 2em;
 	}
 
 	.navbar-nav {
@@ -42,6 +44,10 @@
 	/*text-align: right;*/
 	font-size: 1.3em;
 	line-height: 1.5em;
+	}
+
+	.navbar-toggle .icon-bar {
+		margin-top: 5px !important;
 	}
 }
 
@@ -89,26 +95,34 @@
 /* overlay anchor tag */
 .expand {
 	display: block;
-	position: absolute;
+/*	position: absolute;*/
 	z-index: 30;
-	width: 60px;
-	height: 60px;
+/*	width: 60px;
+	height: 60px;*/
+
+	/*padding: 120px 10px 0;*/
+
 	text-align: center;
 	color: #fff;
-	line-height: 50px;
+	line-height: 40px;
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 1.5em;
+	/*font-size: 30px;*/
 	/*border-radius: 30px;*/
 	/*border: solid 5px #fff;*/
 }
 
 /* overlay original position */
 .expand {
-  left: 0;
-  right: 0;
-  bottom: 50%;
-  margin: 0 auto -30px auto;
-  text-decoration: none;
+	left: 0;
+	right: 0;
+	bottom: 50%;
+	margin: 0 auto -30px auto;
+	text-decoration: none;
+}
+
+.expand:hover {
+	color: #999;
 }
 
 /* overlay hover animation */
