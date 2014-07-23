@@ -31,6 +31,18 @@
 		width: 100%;
 		margin: 0 0 4% 0;
 	}
+
+	#nav-menu{
+		width: 100%;
+	}
+
+	.navbar-nav {
+	margin: 0;
+	text-align: center;
+	/*text-align: right;*/
+	font-size: 1.3em;
+	line-height: 1.5em;
+	}
 }
 
 /*************************
@@ -183,8 +195,13 @@ header {
 	background: none;
 }
 
+.container-fluid>.navbar-header {
+	margin: 0;
+}
+
 .navbar-toggle {
 	/*background-color: #999;*/
+	margin: 0;
 }
 
 .navbar-toggle>.icon-bar {
@@ -193,7 +210,6 @@ header {
 
 .navbar-nav {
 	margin: 0;
-	text-align: right;
 }
 /*************************
 * Footer
