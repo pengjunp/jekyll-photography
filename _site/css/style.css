@@ -118,6 +118,10 @@ body {
 	padding: 40px 20px;
 }
 
+.container-fluid {
+	padding: 0;
+}
+
 a {
 	color: #999;
 	-webkit-transition: all 0.5s ease;
@@ -179,6 +183,18 @@ header {
 	background: none;
 }
 
+.navbar-toggle {
+	/*background-color: #999;*/
+}
+
+.navbar-toggle>.icon-bar {
+	background-color: #999;
+}
+
+.navbar-nav {
+	margin: 0;
+	text-align: right;
+}
 /*************************
 * Footer
 **************************/
