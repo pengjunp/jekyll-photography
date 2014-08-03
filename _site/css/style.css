@@ -1,3 +1,31 @@
+/*************************
+* Font
+**************************/
+@font-face {
+	font-family: 'droidsans';
+	src: url('fonts/DroidSans-webfont.eot');
+	src: url('fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DroidSans-webfont.woff') format('woff'),
+		url('fonts/DroidSans-webfont.ttf') format('truetype'),
+		url('fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'antonio';
+	src: url('fonts/antonio-regular-webfont.eot');
+	src: url('fonts/antonio-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/antonio-regular-webfont.woff') format('woff'),
+		url('fonts/antonio-regular-webfont.ttf') format('truetype'),
+		url('fonts/antonio-regular-webfont.svg#antonioregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*************************
+* Media Query
+**************************/
 /* screen width larger than 992px */
 @media (min-width: 992px) {
 	.container {
@@ -49,6 +77,100 @@
 	.navbar-toggle .icon-bar {
 		margin-top: 5px !important;
 	}
+}
+
+/*************************
+* General
+**************************/
+body {
+	color: #999;
+	overflow-y: scroll;
+	font-family: 'droidsans', Arial, sans-serif;
+	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+}
+
+.container {
+	padding: 40px 20px;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+a {
+	color: #999;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.divider {
+	clear: both;
+	border-bottom: 1px solid #ddd;
+}
+
+/*************************
+* Header & Navigation
+**************************/
+header {
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+#nav-logo {
+	float: left;
+	font-family: 'Muli', Arial, sans-serif;
+}
+
+#nav-logo > a > h1 {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	letter-spacing: 4px;
+	line-height: 40px;
+	font-variant: small-caps;
+}
+
+#nav-menu {
+	float: right;
+	font-size: 12px;
+}
+
+#nav-menu > ul > li > a {
+	padding: 11px 20px;
+	letter-spacing: 2px;
+}
+
+#nav-menu > ul > li > a:last-child {
+	padding-right: 0;
+}
+
+#nav-menu > ul > li > a:hover {
+	background: none;
+}
+
+.container-fluid>.navbar-header {
+	margin: 0;
+}
+
+.navbar-toggle {
+	/*background-color: #999;*/
+	margin: 0;
+}
+
+.navbar-toggle>.icon-bar {
+	background-color: #999;
+}
+
+.navbar-nav {
+	margin: 0;
 }
 
 /*************************
@@ -108,7 +230,10 @@
 	z-index: 30;
 	
 	color: #fff;
-	font-size: 1.5em;
+	font-family: 'Muli', Arial, sans-serif;
+	font-size: 1.2em;
+	font-weight: 400;
+	font-variant: small-caps;
 	line-height: 40px;
 	letter-spacing: 2px;
 	text-align: center;
@@ -132,129 +257,44 @@
 	height: 100%;
 }
 
-/*************************
-* General
-**************************/
-body {
-	color: #999;
 
-	font-family: 'droidsans', Arial, sans-serif;
-	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
-}
-
-.container {
-	padding: 40px 20px;
-}
-
-.container-fluid {
-	padding: 0;
-}
-
-a {
-	color: #999;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
-a:hover {
-	color: #000;
-	text-decoration: none;
-}
-
-.divider {
-	clear: both;
-	border-bottom: 1px solid #ddd;
-}
 
 /*************************
-* Header & Navigation
+* About Page
 **************************/
-header {
-	margin-bottom: 2em;
-	overflow: hidden;
-}
-
-#nav-logo {
+.about-overlay {
+	position: relative;
 	float: left;
-	font-family: 'Muli', Arial, sans-serif;
+	width: 100%;
+	margin: 2em 0;
 }
 
-#nav-logo > a > h1 {
-	margin: 0;
-	padding: 0;
-	color: #000;
-	letter-spacing: 4px;
-	line-height: 40px;
-	/*font-weight: bold;*/
-	/*text-transform: uppercase;*/
-	font-variant: small-caps;
+.about-img-top {
+	position: absolute;
+    width:100%;
+	top: 0;
+	left: 0;
+    z-index:999;
+	display: block;
+  
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 
-#nav-menu {
-	float: right;
-	font-size: 12px;
+.about-img-bottom{
+	width: 100%;
+	display: block;
 }
 
-#nav-menu > ul > li > a {
-	padding: 11px 20px;
-	letter-spacing: 2px;
-}
-
-#nav-menu > ul > li > a:last-child {
-	padding-right: 0;
-}
-
-#nav-menu > ul > li > a:hover {
-	background: none;
-}
-
-.container-fluid>.navbar-header {
-	margin: 0;
-}
-
-.navbar-toggle {
-	/*background-color: #999;*/
-	margin: 0;
-}
-
-.navbar-toggle>.icon-bar {
-	background-color: #999;
-}
-
-.navbar-nav {
-	margin: 0;
+.about-img-top:hover{
+	opacity:0;
 }
 /*************************
 * Footer
 **************************/
 footer {
 	margin-top: 2em;
-}
-
-/*************************
-* Font
-**************************/
-@font-face {
-	font-family: 'droidsans';
-	src: url('../fonts/DroidSans-webfont.eot');
-	src: url('../fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/DroidSans-webfont.woff') format('woff'),
-		url('../fonts/DroidSans-webfont.ttf') format('truetype'),
-		url('../fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'antonio';
-	src: url('../fonts/antonio-regular-webfont.eot');
-	src: url('../fonts/antonio-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/antonio-regular-webfont.woff') format('woff'),
-		url('../fonts/antonio-regular-webfont.ttf') format('truetype'),
-		url('../fonts/antonio-regular-webfont.svg#antonioregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
 }

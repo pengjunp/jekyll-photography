@@ -11,8 +11,23 @@ $(document).ready(function(){
 	});
 
 	// vertical center the title
-	$("img").load(function() {
-		centerTitle();
+	$(".project-img").one("load", function() {
+		centerTitle()
+	}).each(function() {
+		if(this.complete){ $(this).load(); }
+	});
+
+	// fade out transistion
+	$("a.link").click(function(){
+		console.log (window.location.href);
+		console.log (this.href);
+		event.preventDefault();
+		var link = this.href;
+		if (window.location.href != link) {
+			$('body').fadeOut(1000, function(){
+				window.location = link;
+			});
+		}
 	});
 });
 
