@@ -292,6 +292,19 @@ header {
 .about-img-top:hover{
 	opacity:0;
 }
+
+#instagram {
+	margin: 0 0 2em 0;
+}
+
+.instagram-item {
+	margin: 0;
+	padding: 0;
+}
+
+.more-btn {
+	cursor: pointer;
+}
 /*************************
 * Footer
 **************************/

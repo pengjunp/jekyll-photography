@@ -1,7 +1,7 @@
 ---
 layout: project
 directory: maximumpc
-title: Maximum PC
+title: maximum pc
 preview: 00.jpg
 img: ["01", "02", "03", "04", "05"]
 type: [magazine design, acadamic project, individual]

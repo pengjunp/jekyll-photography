@@ -29,6 +29,12 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	// instagram
+	$('#instagram').pongstgrm({
+    accessId:     '12930873',
+    accessToken:  '12930873.e09bb38.e9918aa8203e4f98b7e896033e7a1fc6',
+  });
 });
 
 $( window ).resize(function() {

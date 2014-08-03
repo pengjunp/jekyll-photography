@@ -1,7 +1,7 @@
 ---
 layout: project
 directory: planetofinsects
-title: Planet of Insects
+title: planet of insects
 video: http://player.vimeo.com/video/63691798
 img: ["01", "02", "03", "04", "05", "06", "07", "08"]
 type: [game design, acadamic project, team of 4]
