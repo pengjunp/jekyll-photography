@@ -228,8 +228,8 @@
 
 .modal-body > .close {
   position: absolute;
-  top: -25px;
-  right: 0;
+  top: 0;
+  right: -20px;
   color: #fff;
   text-shadow: 0 1px 1px #000;
   opacity: 0.5;
@@ -243,7 +243,7 @@
           transition: opacity 200ms linear;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .modal-body > .close {
     top: 5px;
     right: 12px;
@@ -469,9 +469,9 @@ fieldset[disabled] .media-column > .btn:hover.active {
 }
 
 .scaling {
-  -webkit-transform: scale(0.96);
-      -ms-transform: scale(0.96);
-          transform: scale(0.96);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-transition: transform 100ms linear;
           transition: transform 100ms linear;
 }

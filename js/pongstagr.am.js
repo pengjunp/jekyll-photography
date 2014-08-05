@@ -32,8 +32,8 @@
     // HTML OPTIONS
     // ===========================
     , preload:          "spinner"
-    , button:           "text-center more-btn"
-    , buttontext:       "see more..."
+    , button:           "text-center more-btn col-md-2 col-md-offset-5"
+    , buttontext:       "more"
     , column:           "col-xs-12 col-sm-4 col-md-3 col-lg-3 instagram-item"
     , likeicon:         "glyphicon glyphicon-heart"
     , muteicon:         "glyphicon glyphicon-volume-off"

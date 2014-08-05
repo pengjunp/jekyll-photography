@@ -24,7 +24,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		var link = this.href;
 		if (window.location.href != link) {
-			$('body').fadeOut(1000, function(){
+			$('body').fadeOut(800, function(){
 				window.location = link;
 			});
 		}
@@ -36,6 +36,13 @@ $(document).ready(function(){
     accessToken:  '12930873.e09bb38.e9918aa8203e4f98b7e896033e7a1fc6',
   });
 });
+
+
+$(window).load(function() {
+	$('.loader').fadeOut(800);
+	// $('body').fadeIn(1000);
+})
+
 
 $( window ).resize(function() {
 	centerTitle();

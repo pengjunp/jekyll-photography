@@ -5,16 +5,18 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{ page.title }} | Jun Peng Photography</title>
-		<link rel='icon' type='image/x-icon' href='images/favicon.ico' />
+		<link rel='icon' type='image/x-icon' href='{{ site.url }}/images/favicon.ico' />
 		<!-- Style Sheets -->
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css">
 		<!-- Google Font -->
 		<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+		<!-- spiner -->
+		<div class="loader"></div>
+
 		<!-- container -->
 		<div class="container">
 
@@ -23,11 +25,46 @@
 
 		<div class="divider"></div>
 
-			<!-- content -->
-			{{ content }}
+			<div id="wrap" class="clearfix">
 
+			<!-- content -->
+			<div class="row">
+				<!-- description -->
+				<div id="project-description" class="col-lg-3 col-md-4 col-sm-12">
+					<h3>{{ page.title }}</h3>
+
+					<p>{{ page.description }}</p>
+				</div>
+
+				<!-- images -->
+				<div id="project-img-list" class="col-lg-9 col-md-8 col-sm-12">
+					{% for i in page.img %}
+					<img class="project-img-lg" src="{{ site.url }}/images/{{ page.path }}/{{ i }}.gif" alt />
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="row">
+				<div id="back-btn" class="pull-left">
+					<a class="link" href="{{ site.url }}/">back to work</a>
+				</div>
+
+				<!-- pagination -->
+				<div id="pagination" class="pull-right">
+					<ul>
+						<li><a class="link" href="{{ page.next.url }}">prev</a></li>
+						<li>/</li>
+						<li><a class="link" href="{{ page.previous.url }}">next</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- <div id="wrap" class="clearfix"> -->
 			<!-- project list -->
-			{% include project-list.html %}
+			
+			<!-- </div> -->
+
+			</div>
 
 		<div class="divider"></div>
 
