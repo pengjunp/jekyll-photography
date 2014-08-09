@@ -1,0 +1,8 @@
+{% if page.img != null %}
+	<section id="project-visuals">
+		<h3 class="project-h3">Visuals</h3>
+		{% for i in page.img %}
+			<img src="{{ site.url }}/images/{{ page.directory }}/{{ i }}.jpg" alt>
+		{% endfor %}
+	</section>
+{% endif %}

@@ -1,0 +1,16 @@
+<!-- project video -->
+<section id="project-preview">
+
+	{% if page.preview != null %}
+		<div class="preview-container">
+			<img src="{{ site.url }}/images/{{ page.directory }}/{{ page.preview }}" alt>
+		</div>
+	{% elsif page.video != null %}
+		<!-- embed video -->
+		<div class="embed-container">
+			<iframe src="{{ page.video }}"></iframe>
+		</div>
+		<!-- embed video -->
+	{% endif %}
+</section>
+<!-- end project video -->

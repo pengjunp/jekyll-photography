@@ -10,8 +10,11 @@
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css">
+		<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/swipebox.css">
 		<!-- Google Font -->
 		<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+		
+		
 	</head>
 	<body>
 		<!-- spiner -->
@@ -39,7 +42,9 @@
 				<!-- images -->
 				<div id="project-img-list" class="col-lg-9 col-md-8 col-sm-12">
 					{% for i in page.img %}
-					<img class="project-img-lg" src="{{ site.url }}/images/{{ page.path }}/{{ i }}.gif" alt />
+					<a href="{{ site.url }}/images/{{ page.path }}/{{ i }}.gif" class="gallery" title="{{ page.title }}">
+						<img class="project-img-lg" src="{{ site.url }}/images/{{ page.path }}/{{ i }}.gif" alt />
+					</a>
 					{% endfor %}
 				</div>
 			</div>
@@ -52,9 +57,17 @@
 				<!-- pagination -->
 				<div id="pagination" class="pull-right">
 					<ul>
-						<li><a class="link" href="{{ page.next.url }}">prev</a></li>
+						{% if page.next.url %}
+						<li><a class="link" href="{{ page.next.url }}">&#60; prev</a></li>
+						{% endif %}
+						
+						{% if page.previous.url and page.next.url %}
 						<li>/</li>
-						<li><a class="link" href="{{ page.previous.url }}">next</a></li>
+						{% endif %}
+
+						{% if page.previous.url %}
+						<li><a class="link" href="{{ page.previous.url }}">next &#62;</a></li>
+						{% endif %}
 					</ul>
 				</div>
 			</div>
@@ -72,9 +85,15 @@
 		{% include footer.html %}
 		<!-- end container -->
 
+		<div class="scroll-top" title="Back to Top"><span class="glyphicon glyphicon-chevron-up"></span></div>
+
 		<!-- JQuery Library -->
 		<script src="{{ site.url }}/js/jquery-1.11.1.min.js"></script>
 		<script src="{{ site.url }}/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="{{ site.url }}/js/script.js"></script>
+		<script src="{{ site.url }}/js/pongstagr.am.js"></script>
+		<script src='{{ site.url }}/js/jquery.fadeloader.js'></script>
+		<script src='{{ site.url }}/js/jquery-ui.min.js'></script>
+		<script src="{{ site.url }}/js/jquery.swipebox.js"></script>
+		<script src="{{ site.url }}/js/script.js"></script>
 	</body>
 </html>

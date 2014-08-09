@@ -1,0 +1,36 @@
+<!-- project info -->
+<section id="project-info">
+	<ul>
+		<li><h3 class="project-h3">Type</h3></li>
+		{% for tp in page.type %}
+			<li><h4>{{ tp }}</h4></li>
+		{% endfor %}
+	</ul>
+	<ul>
+		<li><h3 class="project-h3">Role</h3></li>
+		{% for r in page.role %}
+			<li><h4>{{ r }}</h4></li>
+		{% endfor %}
+	</ul>
+	<ul>
+		<li><h3 class="project-h3">Tools</h3></li>
+		{% for t in page.tool %}
+			<li><h4>{{ t }}</h4></li>
+		{% endfor %}
+	</ul>
+</section>
+<!-- end project info -->
+
+<!-- project description -->
+<section id="project-description">
+	<h3 class="project-h3">Descriptioin</h3>
+	<p>{{ page.description }}</p>
+</section>
+<!-- end project description -->
+
+<!-- project process -->
+<section id="project-process">
+	<h3 class="project-h3">Process & Outcome</h3>
+	<p>{{ page.process }}</p>
+</section>
+<!-- end of project process -->

@@ -1,0 +1,39 @@
+<!-- navigation menu -->
+<nav>
+	<a href="{{ site.url }}/index.html">
+		<img src="{{ site.url }}/images/logo.png" id="logo" alt>
+	</a>
+	
+	<ul id="nav-menu">
+		{% if page.title == "About" %}	
+			<li><a href="{{ site.url }}/index.html">WORK</a></li>
+			<li><a class="current-item" href="{{ site.url }}/about/">ABOUT</a></li>
+			<li><a href="{{ site.url }}/contact/">CONTACT</a></li>		
+		{% elsif page.title == "Contact" %}	
+			<li><a href="{{ site.url }}/index.html">WORK</a></li>
+			<li><a href="{{ site.url }}/about/">ABOUT</a></li>
+			<li><a class="current-item" href="{{ site.url }}/contact/">CONTACT</a></li>
+		{% else %}
+			<li><a class="current-item" href="{{ site.url }}/index.html">WORK</a></li>
+			<li><a href="{{ site.url }}/about/">ABOUT</a></li>
+			<li><a href="{{ site.url }}/contact/">CONTACT</a></li>
+		{% endif %}
+
+	</ul>
+	
+	<!-- recent work -->
+	<ul id="recent-work">
+		<li><h3>RECENT</h3><li>
+		{% for post in site.posts limit:4 %}
+      		<li>
+      			{% if page.url == post.url %}
+      				<a class="current-item" href="{{ post.url }}">{{ post.title }}</a>
+      			{% else %}
+      				<a href="{{ post.url }}">{{ post.title }}</a>
+      			{% endif %}
+      		</li>
+    	{% endfor %}
+	</ul>
+	<!-- end recent work -->			
+</nav>
+<!-- end navigation menu -->
