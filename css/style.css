@@ -299,13 +299,18 @@ header {
 /*************************
 * Project Page
 **************************/
-#project-description {
-
+#project-description>h3 {
+	text-transform: capitalize;
 }
 
 #project-img-list>a {
 	display: none;
 }
+
+#project-img-list>a:hover {
+	opacity: 0.8 !important;
+}
+
 
 .project-img-lg {
 	margin-bottom: 2em;

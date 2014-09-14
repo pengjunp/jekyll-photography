@@ -2,8 +2,7 @@
 <div class="project-list">
 	{% for post in site.posts %}
 		<div class="project-item col-md-4 col-sm-6">
-			<!-- <img class="project-img" src="{{ site.url }}/images/{{ post.directory }}/thumb-mono.jpg" alt> -->
-			<img class="project-img" src="http://placehold.it/800x800" alt>
+			<img class="project-img" src="{{ site.url }}/images/{{ post.path }}/00.jpg" alt />
 			<div class="project-overlay">
 				<!-- <a class="expand" href="{{ post.url }}">+</a> -->
 				<a class="expand link" href="{{ post.url }}">{{ post.title }}</a>
