@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 	$( '.gallery' ).swipebox({
 		hideBarsOnMobile : true, // false will show the caption and navbar on mobile devices
-		hideBarsDelay : 0 // delay before hiding bars
+		hideBarsDelay : 3000 // delay before hiding bars
 	});
 
 	// scroll top button
