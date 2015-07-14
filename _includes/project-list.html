@@ -2,7 +2,9 @@
 <div class="project-list">
 	{% for post in site.posts %}
 		<div class="project-item col-md-4 col-sm-6">
-			<img class="project-img" src="{{ site.url }}/images/{{ post.path }}/00.jpg" alt />
+			<a href="{{ post.url }}">
+				<img class="project-img" src="{{ site.url }}/images/{{ post.path }}/00.jpg" alt={{ post.title }} />
+			</a>
 			<div class="project-overlay">
 				<!-- <a class="expand" href="{{ post.url }}">+</a> -->
 				<a class="expand link" href="{{ post.url }}">{{ post.title }}</a>

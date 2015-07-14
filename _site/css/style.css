@@ -231,6 +231,7 @@ header {
 	max-width: 100%;
 	height: auto;
 	z-index: 10;
+	cursor: pointer;
 }
 
 
