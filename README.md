@@ -1,4 +1,4 @@
 pengjunp.github.io
 ==================
 
-&copy;2014 Jun Peng Photography
+&copy;2016 Patrick J. Peng Photography
